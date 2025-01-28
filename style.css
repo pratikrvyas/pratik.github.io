@@ -1,71 +1,92 @@
-/* style.css */
+/* style.css - More Professional Version */
 
-/* Basic Reset and Body Styling */
+/* Font and Basic Reset */
 body {
-    font-family: 'Arial', sans-serif; /* Choose a readable font */
-    margin: 0; /* Reset default body margin */
-    padding: 0; /* Reset default body padding */
-    line-height: 1.6;
-    color: #333; /* Dark gray text color for readability */
-    background-color: #f4f4f4; /* Light gray background */
+    font-family: 'Roboto', sans-serif; /* Modern, clean sans-serif font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.7; /* Slightly increased line height for better readability */
+    color: #495057; /* Darker, more sophisticated gray text */
+    background-color: #f8f9fa; /* Very light gray, almost white background */
+    -webkit-font-smoothing: antialiased; /* Better font rendering for macOS/iOS */
+    -moz-osx-font-smoothing: grayscale; /* Better font rendering for Firefox on macOS */
 }
 
+/* Import Roboto font from Google Fonts (Include this in your <head> of index.html) */
+/* <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> */
+
+
 .container {
-    max-width: 960px; /* Limit website width for comfortable reading */
-    margin: auto; /* Center the container horizontally */
-    padding: 20px;
-    background-color: #fff; /* White container background */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 1000px; /* Slightly wider container for more content space */
+    margin: auto;
+    padding: 30px; /* Increased padding for more whitespace */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Lighter, more subtle shadow */
+    border-radius: 8px; /* Slightly rounded corners for a softer look */
 }
 
 /* Header Styling */
 header {
     text-align: center;
-    padding: 40px 0;
-    background-color: #e0f7fa; /* Light teal header background */
-    color: #006064; /* Darker teal header text color */
-    margin-bottom: 30px;
+    padding: 50px 0 40px; /* Adjusted header padding */
+    background-color: #ffffff; /* White header background, cleaner look */
+    color: #212529; /* Very dark gray, almost black for header text */
+    margin-bottom: 40px;
 }
 
 header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
+    margin-bottom: 15px;
+    font-size: 2.8em; /* Slightly larger heading */
+    font-weight: 700; /* Bold font weight for headings */
+    letter-spacing: -0.02em; /* Slightly reduce letter spacing for headings */
 }
 
 header p {
-    font-size: 1.1em;
-    color: #26a69a; /* Medium teal color */
+    font-size: 1.2em; /* Slightly larger paragraph text */
+    color: #6c757d; /* Medium gray for header paragraph */
+    font-weight: 500; /* Medium font weight for emphasis */
 }
 
 /* Section Styling */
 section {
-    margin-bottom: 40px;
-    padding: 20px;
+    margin-bottom: 50px; /* Increased section margin */
+    padding: 25px 0; /* Adjusted section padding */
 }
 
 section h2 {
-    color: #00838f; /* Teal section heading color */
-    border-bottom: 2px solid #b2ebf2; /* Light teal border under headings */
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    color: #343a40; /* Dark gray for section headings */
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e0e0e0; /* Lighter gray border for headings */
 }
 
-/* Project and Repository Styling */
+/* Project, Repository, Blog Item Styling */
 .project, .repository-item, .blog-post-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd; /* Light gray border */
-    border-radius: 5px;
-    background-color: #f9f9f9; /* Very light gray background for items */
+    margin-bottom: 25px; /* Increased item margin */
+    padding: 20px; /* Increased item padding */
+    border: 1px solid #e0e0e0; /* Lighter gray border */
+    border-radius: 6px; /* Slightly less rounded corners */
+    background-color: #fff; /* White background for items */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Very subtle shadow for items */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition on hover */
 }
+
+.project:hover, .repository-item:hover, .blog-post-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow on hover */
+}
+
 
 .project h3, .repository-item h3, .blog-post-item h3 {
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: 500; /* Medium font weight for item headings */
 }
 
 .repo-description, .blog-description {
-    color: #777; /* Gray color for descriptions */
+    color: #6c757d; /* Medium gray for descriptions */
     font-style: italic;
 }
 
@@ -74,63 +95,81 @@ section h2 {
     list-style: none;
     padding-left: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Slightly wider skill columns */
+    gap: 20px; /* Increased gap between skill items */
 }
 
 #skills ul li {
-    background-color: #e8f5e9; /* Light green background for skill items */
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 1px solid #c8e6c9; /* Light green border */
+    background-color: #f0f8ff; /* Very light blue background for skill items */
+    padding: 15px 20px; /* Increased padding for skill items */
+    border-radius: 6px;
+    border: 1px solid #dbe2ef; /* Light blue-gray border */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background and transform transitions */
 }
 
+#skills ul li:hover {
+    background-color: #e0f2fe; /* Slightly darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+
 #skills ul li strong {
-    display: block; /* Make strong element a block to separate it */
-    margin-bottom: 5px;
-    color: #388e3c; /* Dark green for skill category */
+    display: block;
+    margin-bottom: 8px;
+    color: #495057; /* Darker gray for skill category */
+    font-weight: 600; /* Slightly bolder skill category */
 }
 
 /* Links and Footer Styling */
 a {
-    color: #007bff; /* Blue link color */
+    color: #007bff; /* Still using blue for links */
     text-decoration: none;
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    font-weight: 500; /* Slightly bolder links */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and underline */
 }
 
 a:hover {
-    color: #0056b3; /* Darker blue on hover */
-    text-decoration: underline; /* Underline on hover for clarity */
+    color: #0056b3;
+    text-decoration: underline; /* Underline on hover */
 }
 
 footer {
     text-align: center;
-    padding: 30px 0;
-    margin-top: 40px;
-    border-top: 1px solid #ccc;
-    color: #777;
-    background-color: #f4f4f4; /* Match body background for seamless look */
+    padding: 40px 0; /* Increased footer padding */
+    margin-top: 60px; /* Increased footer margin */
+    border-top: 1px solid #e0e0e0; /* Lighter gray border */
+    color: #6c757d; /* Medium gray for footer text */
+    background-color: #f8f9fa; /* Match body background */
+    font-size: 0.95em; /* Slightly larger footer font size */
 }
 
 footer p {
-    font-size: 0.9em;
+    margin-bottom: 0; /* Remove default paragraph margin in footer */
 }
 
-/* Responsive adjustments (simple example) */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .container {
-        padding: 10px; /* Reduce padding on smaller screens */
+        padding: 20px; /* Adjust container padding on smaller screens */
+        border-radius: 0; /* Remove rounded corners on small screens */
+        box-shadow: none; /* Remove shadow on small screens */
     }
 
     header {
-        padding: 30px 0; /* Slightly reduce header padding on smaller screens */
+        padding: 40px 0 30px; /* Adjust header padding on smaller screens */
     }
 
     header h1 {
-        font-size: 2em; /* Reduce header font size on smaller screens */
+        font-size: 2.2em; /* Reduce header font size on smaller screens */
+    }
+
+    section {
+        margin-bottom: 40px; /* Adjust section margin on smaller screens */
+        padding: 20px 0; /* Adjust section padding on smaller screens */
     }
 
     #skills ul {
         grid-template-columns: 1fr; /* Stack skills in one column on small screens */
+        gap: 15px; /* Adjust gap between skill items on small screens */
     }
 }

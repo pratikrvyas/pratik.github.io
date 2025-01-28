@@ -1,0 +1,136 @@
+/* style.css */
+
+/* Basic Reset and Body Styling */
+body {
+    font-family: 'Arial', sans-serif; /* Choose a readable font */
+    margin: 0; /* Reset default body margin */
+    padding: 0; /* Reset default body padding */
+    line-height: 1.6;
+    color: #333; /* Dark gray text color for readability */
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+.container {
+    max-width: 960px; /* Limit website width for comfortable reading */
+    margin: auto; /* Center the container horizontally */
+    padding: 20px;
+    background-color: #fff; /* White container background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #e0f7fa; /* Light teal header background */
+    color: #006064; /* Darker teal header text color */
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #26a69a; /* Medium teal color */
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+section h2 {
+    color: #00838f; /* Teal section heading color */
+    border-bottom: 2px solid #b2ebf2; /* Light teal border under headings */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Project and Repository Styling */
+.project, .repository-item, .blog-post-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Very light gray background for items */
+}
+
+.project h3, .repository-item h3, .blog-post-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.repo-description, .blog-description {
+    color: #777; /* Gray color for descriptions */
+    font-style: italic;
+}
+
+/* Skills Section Styling */
+#skills ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 15px;
+}
+
+#skills ul li {
+    background-color: #e8f5e9; /* Light green background for skill items */
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #c8e6c9; /* Light green border */
+}
+
+#skills ul li strong {
+    display: block; /* Make strong element a block to separate it */
+    margin-bottom: 5px;
+    color: #388e3c; /* Dark green for skill category */
+}
+
+/* Links and Footer Styling */
+a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover for clarity */
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    color: #777;
+    background-color: #f4f4f4; /* Match body background for seamless look */
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments (simple example) */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    header {
+        padding: 30px 0; /* Slightly reduce header padding on smaller screens */
+    }
+
+    header h1 {
+        font-size: 2em; /* Reduce header font size on smaller screens */
+    }
+
+    #skills ul {
+        grid-template-columns: 1fr; /* Stack skills in one column on small screens */
+    }
+}
